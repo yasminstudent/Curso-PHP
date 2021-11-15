@@ -9,3 +9,8 @@ Módulos do Curso:
 6. Orientação à Objetos
 7. Banco de Dados, CRUD, DAO, SOLID
 8. Padrão MVC (Model, View, Controller)
+9. x
+10. x
+11. x
+12. Projeto Prático em MVC (Devsbook)
+13. x
