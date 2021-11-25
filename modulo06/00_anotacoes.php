@@ -18,6 +18,8 @@
   $post1->likes = 19;
 
 
+
+
   ----------------------- Definindo Métodos e Propriedades -----------------------
   https://alunos.b7web.com.br/curso/php/definindo-metodos-e-propriedades
 
@@ -48,6 +50,8 @@
   $post1->aumentaLike(); //likes do post1 passa a valer 1
 
 
+
+
   ----------------------- Typed Properties (php 7.4) -----------------------
   https://alunos.b7web.com.br/curso/php/typed-properties-74
 
@@ -74,6 +78,8 @@
   }
 
   $post1 = new Post(25)
+
+
 
   ----------------------- Entendendo Encapsulamento -----------------------
   https://alunos.b7web.com.br/curso/php/entendendo-encapsulamento
@@ -109,5 +115,21 @@
   public function getAuthor(){
     return $this->author ?? ''; //tratamento se não tiver nenhum autor
   }
+
+
+
+
+  ----------------------- Método Estático -----------------------
+  Métodos que podem ser usados sem a necessidade de instanciar a classe / criar o objeto
+
+  class Matematica{
+    public static string $nome = "Yasmin";
+    public static function somar($x, $y){
+      return $x + $y;
+    }
+  }
+
+  echo Matematica::somar(10, 20); //exibe 30
+  echo Matematica::$nome; //exibe Yasmin
 */
 ?>
