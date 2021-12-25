@@ -20,5 +20,31 @@
         * Os nomes dos métodos DEVEM ser declarados em camelCase
         * Em uma classe as variáveis devem ser declaradas com somente 1 dos 3 padrões.
             Recomendação do professor: camelCase
+
+
+        PSR 4:
+        * Toda classe deve ter um namespace
+        * Um namespace deve seguir um padrão/ser compátivel com os diretórios
+          Ex: 
+            caminho do arquivo com a classe: classes/matematica/primeiroAno/Basica.php
+            namespace da classe Basica: matematica\primeiroAno 
+            (nesse caso consideramos o diretório classes como base de todas as classes, 
+            então não se faz necessário colocar no namespace)
+
+            e o autoload poderia ficar assim:
     */
+    spl_autoload_register(function($class){
+      $baseDir = __DIR__.'/classes/'; //__DIR__ retorna os diretórios onde o arquivo está
+
+      //$class seria igual a matematica\primeiroAno\Basica
+
+      $file = $baseDir . str_replace('\\', '/', $class).'.php';
+
+      if(file_exists($file)){
+        require $file;
+      }
+    });
+
+    //e o uso da classe ficaria assim:
+    // $exemplo = new matematica\primeiroAno\Basica()
 ?>
