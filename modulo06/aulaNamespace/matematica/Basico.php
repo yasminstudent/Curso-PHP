@@ -1,5 +1,5 @@
 <?php
-    namespace exemplo\matematica;
+    namespace aulaNamespace\matematica;
     
     class Basico
     {
