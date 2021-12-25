@@ -26,7 +26,7 @@
     */
 
     //Testando a dependência monolog:
-    
+
     require 'vendor/autoload.php';
 
     use Monolog\Logger;
@@ -39,4 +39,28 @@
     // add records to the log
     $log->warning('Foo');
     $log->error('Bar');
+
+    //use classes2\matematica\primeiroAno\Basica;
+
+    $m = new classes2\matematica\primeiroAno\Basica();
+    echo $m->testar();
+
+    /*
+        P/ configurar o autoload do vendor, para que ele importe classes que estarão em outras pastas (nesse exemplo no classes2)
+        devemos colocar no arquivo composer.json
+        embaixo do require, o seguinte:
+        "autoload": {
+            "psr-4": { "classes2\\": "classes2/"} 
+        }
+
+        Explicando: 
+        "autoload": {
+            "psr-4": { "namespace\\": "pasta_a_q_se_refere/"} 
+        }
+
+        E então, p/ gerar outro autoload, devemos rodar o comando:
+        composer dump-autoload
+
+        E pronto, conseguimos importar as dependênciais em vendor e as nossas próprias classes
+    */
 ?>
