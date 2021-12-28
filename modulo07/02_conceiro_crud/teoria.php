@@ -1,0 +1,9 @@
+<?php
+/*
+    CRUD
+    C -> CREATE
+    R -> READ
+    U -> UPDATE
+    D -> DELETE
+*/
+?>
