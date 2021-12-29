@@ -31,6 +31,8 @@
         <div class="container">
             <h3 class="mt-4 mb-4">Editar usuário</h3>
             <form style="width: 500px" action="editar_action.php" method="POST">
+                <input type="hidden" name="id" value="<?=$info["id"]?>">
+                
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" class="form-control form-control-sm" id="name" name="name" value="<?=$info["nome"]?>">

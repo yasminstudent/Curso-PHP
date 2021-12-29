@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="container">
-            <a class="btn btn-primary mt-4 mb-4" href="adicionar.php" role="button">Adicionar Usuário</a>
+            <a class="btn btn-info mt-4 mb-4" href="adicionar.php" role="button">Adicionar Usuário</a>
 
             <table class="table table-striped">
                 <thead>
@@ -35,7 +35,10 @@
                             <td><?=$usuario["email"];?></td>
                             <td>
                                 <a class="btn btn-warning" href="editar.php?id=<?=$usuario["id"];?>" role="button">Editar</a>
-                                <a class="btn btn-danger" href="deletar.php?id=<?=$usuario["id"];?>" role="button">Excluir</a>
+                                <a class="btn btn-danger" href="deletar.php?id=<?=$usuario["id"];?>" role="button" 
+                                    onclick="return confirm('Tem certeza que deseja excluir?')">
+                                    Excluir
+                                </a>
                             </td>
                         </tr>
                     <?php endforeach ?>
