@@ -37,6 +37,7 @@ interface UsuarioDAO
 {
     public function create(Usuario $usuario);
     public function findAll();
+    public function findByEmail($email, $id);
     public function findById($id);
     public function update(Usuario $usuario);
     public function delete($id);

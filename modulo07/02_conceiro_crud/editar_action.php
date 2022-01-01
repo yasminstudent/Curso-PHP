@@ -16,7 +16,7 @@
         exit;
     }
     else{
-        header("location: adicionar.php");
+        header("location: editar.php?id=".$id);
         exit;
     }
 ?>
