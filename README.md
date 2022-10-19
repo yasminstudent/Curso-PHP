@@ -1,4 +1,4 @@
-## Curso-PHP
+## Curso de PHP Orientado à Objeto
 
 ### Módulos do Curso:
 1. Orientação à Objetos
